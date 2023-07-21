@@ -3,7 +3,8 @@ import QtQuick
 
 QtObject {
     enum Theme {
-        Light
+        Light,
+        Dark
     }
     property int theme: Style.Theme.Dark
 }
