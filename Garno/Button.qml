@@ -6,25 +6,22 @@ T.Button {
     implicitHeight: 40
     implicitWidth: 100
 
-//    property color color1: "#7F7FD5"
-//    property color color2: "#86A8E7"
-//    property color color3: "#91EAE4"
+    property alias radius: backgroundItem.radius
 
     property color color1: "#2193b0"
-    property color color3: "#6dd5ed"
+    property color color2: "#6dd5ed"
+    property bool orientation: false
 
     property Gradient press: Gradient {
         GradientStop { position: 0.0; color: Qt.darker(color1, 1.1) }
-//        GradientStop { position: 0.5; color: Qt.darker(color2, 1.1) }
-        GradientStop { position: 1.0; color: Qt.darker(color3, 1.1) }
-        orientation: Gradient.Horizontal
+        GradientStop { position: 1.0; color: Qt.darker(color2, 1.1) }
+        orientation: root.orientation ? Gradient.Vertical : Gradient.Horizontal
     }
 
     property Gradient notPress: Gradient {
         GradientStop { position: 0.0; color: color1 }
-//        GradientStop { position: 0.5; color: color2 }
-        GradientStop { position: 1.0; color: color3 }
-        orientation: Gradient.Horizontal
+        GradientStop { position: 1.0; color: color2 }
+        orientation: root.orientation ? Gradient.Vertical : Gradient.Horizontal
     }
 
     states: [
