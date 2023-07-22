@@ -10,13 +10,13 @@ qt_standard_project_setup()
 
 qt_add_executable(appQGradient
     main.cpp
-    uilogic.h uilogic.cpp
+    src/UILogic.hpp src/UILogic.cpp
 )
 
 qt_add_qml_module(appQGradient
-    URI Controls
+    URI QGradient
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES ui/Main.qml
 )
 
 add_subdirectory(Garno)

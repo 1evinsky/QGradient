@@ -1,5 +1,4 @@
-#ifndef UILOGIC_H
-#define UILOGIC_H
+#pragma once
 
 #include <QObject>
 
@@ -13,4 +12,3 @@ signals:
 
 };
 
-#endif // UILOGIC_H

@@ -18,20 +18,14 @@ Window {
     Component.onCompleted: {
         console.log(Style.theme)
     }
-
-    Rectangle{
-        id: rect
-        anchors.top: parent.top
-        anchors.topMargin: 10
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: 100
-        height: 100
-        color: "black"
+    
+    StackView{
+        id: mainStack
+        anchors.fill: parent
+        
     }
 
     Button{
-        id: button
-        anchors.centerIn: parent
         text: "Add"
     }
 }

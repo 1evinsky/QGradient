@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "uilogic.h"
+#include "src/UILogic.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.addImportPath(":/garno.com/import");
-    const QUrl url(u"qrc:/Controls/Main.qml"_qs);
+    const QUrl url(u"qrc:/QGradient/ui/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
         &app, []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
